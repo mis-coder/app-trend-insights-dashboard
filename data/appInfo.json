@@ -137224,7 +137224,7 @@
      "rating": "NaN",
      "reviews": 0,
      "size": "Varies with device",
-     "installs": 0,
+     "installs": "0",
      "type": "NaN",
      "price": 0,
      "contentRating": "Everyone 10+",
@@ -157078,19 +157078,7 @@
      "currentVer": "3.0.0",
      "androidVer": "4.0.3 and up"
     },
-    {
-     "name": "Life Made WI-Fi Touchscreen Photo Frame",
-     "category": 1.9,
-     "rating": 19,
-     "reviews": "3.0M",
-     "size": "1,000+",
-     "installs": "Free",
-     "type": 0,
-     "price": "Everyone",
-     "genres": "February 11, 2018",
-     "lastUpdated": "1.0.19",
-     "currentVer": "4.0 and up"
-    },
+    
     {
      "name": "osmino Wi-Fi: free WiFi",
      "category": "TOOLS",

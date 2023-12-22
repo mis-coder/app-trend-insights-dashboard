@@ -13,3 +13,5 @@ export interface AppInfoItem {
   currentVer: string;
   androidVer: string;
 }
+
+export type CategoryNumberMap = Record<string, number>;
