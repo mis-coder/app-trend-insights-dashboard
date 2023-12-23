@@ -19,7 +19,6 @@ export async function GET() {
 
       categoryMap[category] = (categoryMap[category] || 0) + numOfInstalls;
     });
-    console.log(categoryMap);
     return NextResponse.json(categoryMap);
   } catch (err) {
     console.log("[GET_MARKET_SHARE_BY_CATEGORY]:", err);
