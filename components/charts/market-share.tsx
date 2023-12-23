@@ -76,7 +76,7 @@ const MarketShareChart: React.FC<MarketShareChartProps> = () => {
   };
 
   return (
-    <div className="text-white h-full w-full">
+    <div className="text-white h-screen w-screen">
       <Bar data={chartData} options={options} />
     </div>
   );

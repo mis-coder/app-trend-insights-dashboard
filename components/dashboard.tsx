@@ -8,6 +8,7 @@ import {
   LinearScale,
   Tooltip,
 } from "chart.js";
+import ContentRatingChart from "./charts/content-rating";
 import MarketShareChart from "./charts/market-share";
 
 Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
@@ -16,12 +17,12 @@ interface IDashboardProps {}
 
 const Dashboard: React.FC<IDashboardProps> = ({}) => {
   return (
-    <div className="h-screen w-screen bg-black flex justify-center flex-wrap gap-10">
+    <div className="h-full w-full">
       <MarketShareChart />
-      {/* <AppPerformanceChart />
-      <UserSentimentChart />
+      <ContentRatingChart />
+      {/* <UserSentimentChart />
       <RiskAssesmentChart />
-      <TableView /> */}
+      <TableView />  */}
     </div>
   );
 };
