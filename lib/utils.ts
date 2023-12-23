@@ -11,3 +11,29 @@ export const generateRandomColors = (totalColors: number) => {
 
   return colors;
 };
+
+export const formatBigNumber = (num: number, precision = 2) => {
+  const suffixMap = [
+    { suffix: "Q", threshold: 1e15 },
+    { suffix: "T", threshold: 1e12 },
+    { suffix: "B", threshold: 1e9 },
+    { suffix: "M", threshold: 1e6 },
+    { suffix: "K", threshold: 1e3 },
+    { suffix: "", threshold: 1 },
+  ];
+
+  const desiredValue = suffixMap.find(
+    (item) => Math.abs(num) >= item.threshold
+  );
+
+  if (desiredValue) {
+    const formattedNum =
+      (num / desiredValue.threshold).toFixed(precision) +
+      " " +
+      desiredValue.suffix +
+      "+";
+    return formattedNum;
+  }
+
+  return num;
+};

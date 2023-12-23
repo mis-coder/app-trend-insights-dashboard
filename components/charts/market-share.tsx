@@ -1,15 +1,31 @@
-import { generateRandomColors } from "@/lib/utils";
-import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
+import { formatBigNumber } from "@/lib/utils";
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Colors,
+  Legend,
+  LinearScale,
+  Title,
+  Tooltip,
+} from "chart.js";
 import React, { useEffect, useState } from "react";
-import { Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(
+  Colors,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 interface MarketShareChartProps {}
 
 const MarketShareChart: React.FC<MarketShareChartProps> = () => {
-  const [labels, setLabels] = useState<string[]>([]);
-  const [data, setData] = useState<number[]>([]);
+  const [data, setData] = useState<Record<string, number>[]>([]);
 
   const getMarketShareByCategory = async () => {
     const res = await fetch("/api/market-share-by-category", {
@@ -17,30 +33,51 @@ const MarketShareChart: React.FC<MarketShareChartProps> = () => {
     });
 
     const data = await res.json();
-
-    setLabels(Object.keys(data));
-    setData(Object.values(data));
+    setData(data);
   };
 
   useEffect(() => {
     getMarketShareByCategory();
   }, []);
 
+  const options = {
+    scales: {
+      y: {
+        ticks: {
+          callback: function (value, index, ticks) {
+            return formatBigNumber(value, 0);
+          },
+        },
+      },
+    },
+    responsive: true,
+    plugins: {
+      colors: {
+        enabled: true,
+      },
+      legend: {
+        display: false,
+        position: "top" as const,
+      },
+      title: {
+        display: true,
+        text: "Market Share by App Category",
+      },
+    },
+  };
+
+  const chartData = {
+    datasets: [
+      {
+        label: "Total Installs",
+        data,
+      },
+    ],
+  };
+
   return (
     <div className="text-white h-full w-full">
-      <Pie
-        data={{
-          labels,
-          datasets: [
-            {
-              label: "Total Installs",
-              data,
-              backgroundColor: generateRandomColors(data.length),
-              borderWidth: 1,
-            },
-          ],
-        }}
-      />
+      <Bar data={chartData} options={options} />
     </div>
   );
 };
