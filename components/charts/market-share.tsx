@@ -52,12 +52,8 @@ const MarketShareChart: React.FC<MarketShareChartProps> = () => {
     },
     responsive: true,
     plugins: {
-      colors: {
-        enabled: true,
-      },
       legend: {
         display: false,
-        position: "top" as const,
       },
       title: {
         display: true,
