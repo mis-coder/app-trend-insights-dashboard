@@ -20,9 +20,6 @@ const Dashboard: React.FC<IDashboardProps> = ({}) => {
     <div className="h-full w-full">
       <MarketShareChart />
       <ContentRatingChart />
-      {/* <UserSentimentChart />
-      <RiskAssesmentChart />
-      <TableView />  */}
     </div>
   );
 };
