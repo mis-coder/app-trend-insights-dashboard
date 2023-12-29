@@ -1,6 +1,5 @@
 "use client";
 
-import { AppInfoItem } from "@/types";
 import {
   BarElement,
   CategoryScale,
@@ -9,25 +8,21 @@ import {
   LinearScale,
   Tooltip,
 } from "chart.js";
-import AppPerformanceChart from "./charts/app-performance";
+import ContentRatingChart from "./charts/content-rating";
 import MarketShareChart from "./charts/market-share";
-import RiskAssesmentChart from "./charts/risk-assesment";
-import UserSentimentChart from "./charts/user-sentiment";
 
 Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-interface IDashboardProps {
-  data: AppInfoItem[];
-}
+interface IDashboardProps {}
 
-const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
-  // console.log("data: ", data);
+const Dashboard: React.FC<IDashboardProps> = ({}) => {
   return (
-    <div className="h-screen w-screen bg-black">
+    <div className="h-full w-full">
       <MarketShareChart />
-      <AppPerformanceChart />
-      <UserSentimentChart />
+      <ContentRatingChart />
+      {/* <UserSentimentChart />
       <RiskAssesmentChart />
+      <TableView />  */}
     </div>
   );
 };
