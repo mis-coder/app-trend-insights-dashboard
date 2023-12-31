@@ -1,13 +1,13 @@
 import Header from "@/components/UI/header";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "App Trend Insights Dashboard",
-  description: "App Trend Insights Dashboard created with Next.js",
+  title: "App Trendz",
+  description: "App Trend Insights Dashboard",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={nunitoSans.className}>
         <Header />
         {children}
       </body>
