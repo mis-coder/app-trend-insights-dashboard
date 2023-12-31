@@ -1,7 +1,7 @@
 //TODO: reuse the outer div for all cards
 const Description = () => {
   return (
-    <div className="h-auto w-full bg-white rounded-lg p-4 pb-8 shadow-md">
+    <div className="h-auto w-full bg-white rounded-lg p-4 pb-8 shadow-outline">
       <h1 className="text-green font-bold text-xl">Welcome to App Trendz 👋</h1>
       <p className="text-base mt-1">
         Your ultimate guide to app trends and insights in the ever-evolving

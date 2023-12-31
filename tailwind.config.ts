@@ -21,6 +21,7 @@ const config: Config = {
         green: "#4bc0c0",
         purple: "#9966ff",
         silver: "#c9cbcf",
+        "silver-light": "#f2f3f7",
       },
     },
   },
