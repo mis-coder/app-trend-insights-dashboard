@@ -1,5 +1,3 @@
-import Dashboard from "@/components/dashboard";
-
 export default async function Home() {
-  return <Dashboard />;
+  return <main>Welcome to App trendz</main>;
 }
