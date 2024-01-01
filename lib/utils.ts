@@ -28,12 +28,10 @@ export const formatBigNumber = (num: number, precision = 2) => {
 
   if (desiredValue) {
     const formattedNum =
-      (num / desiredValue.threshold).toFixed(precision) +
-      " " +
-      desiredValue.suffix +
-      "+";
+      (num / desiredValue.threshold).toFixed(precision) + desiredValue.suffix;
     return formattedNum;
   }
 
   return num;
 };
+

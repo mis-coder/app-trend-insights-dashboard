@@ -1,3 +1,5 @@
+import { formatBigNumber } from "@/lib/utils";
+import { Overview } from "@/types";
 import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
 
@@ -29,7 +31,16 @@ export async function GET() {
         END), 2) AS average_rating 
     FROM apps`;
 
-    return NextResponse.json(rows[0]);
+    const { total_app_count, total_installs, average_rating, average_reviews } =
+      rows[0] as Record<Overview, string>;
+    const formatResponse = {
+      total_app_count: formatBigNumber(Number(total_app_count)),
+      total_installs: formatBigNumber(Number(total_installs)),
+      average_reviews: formatBigNumber(Number(average_reviews)),
+      average_rating: Number(average_rating),
+    };
+
+    return NextResponse.json(formatResponse);
   } catch (err) {
     console.log("[GET_OVERVIEW]: ", err);
     throw new NextResponse("Internal Server Error", { status: 500 });
