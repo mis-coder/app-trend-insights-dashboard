@@ -24,25 +24,27 @@ const FeaturedCategories = () => {
 
   return (
     <div className="h-auto my-auto w-full bg-white rounded-lg p-4 shadow-outline mt-4">
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full items-center justify-between border-b-1 border-b-solid border-b-silver">
         <h1 className="text-xl font-bold text-green p-4">Top Categories</h1>
       </div>
-        <div>
-          {categories.map((category, index) => (
-            <div
-              key={category.id}
-              className="flex items-start justify-between mb-2 gap-2 pl-4"
-            >
-              <div className="flex gap-2  font-semibold">
-                <p>{index + 1}.</p>
-                <h3 className="text-ellipsis">{category.name}</h3>
-              </div>
-              <p className="pr-10 opacity-60 text-sm">
-                {category.totalInstalls} installs
-              </p>
+      <div>
+        {categories.map((category, index) => (
+          <div
+            key={category.id}
+            className="flex items-start justify-between mb-2 gap-2 pl-4"
+          >
+            <div className="flex gap-2  font-semibold">
+              <p>{index + 1}.</p>
+              <h3 className="text-ellipsis text-sm md:text-md lg:text-md">
+                {category.name}
+              </h3>
             </div>
-          ))}
-        </div>
+            <p className="pr-10 opacity-60 text-xs md:text-sm lg:text-sm">
+              {category.totalInstalls} installs
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

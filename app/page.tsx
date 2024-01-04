@@ -6,10 +6,10 @@ import Summary from "@/components/Dashboard/summary";
 
 export default async function Home() {
   return (
-    <main className="h-full w-screen bg-silver-light p-2">
+    <main className="h-full w-screen bg-silver-light p-4">
       <Description />
       <Summary />
-      <div className="w-full flex flex-col md:flex-row lg:flex-row gap-1 md:gap-4 lg:gap-4">
+      <div className="w-full flex flex-col-reverse md:flex-row lg:flex-row gap-1 md:gap-4 lg:gap-4">
         <div className="h-auto w-full md:w-8/12 lg:w-8/12">
           <MarketShareChart />
           <FeaturedCategories />
