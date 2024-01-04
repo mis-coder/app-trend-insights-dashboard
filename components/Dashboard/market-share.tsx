@@ -30,8 +30,8 @@ const MarketShareChart = () => {
   }, []);
 
   return (
-    <div className="h-auto w-full md:w-8/12 lg:w-8/12 bg-white rounded-lg p-4 pb-8 shadow-outline my-4">
-      <h1 className="text-green font-bold text-lg">
+    <div className="h-auto w-full  bg-white rounded-lg p-4 pb-8 shadow-outline my-4">
+      <h1 className="text-green font-bold text-xl">
         Market Share by App Category
       </h1>
       <div className="p-4">

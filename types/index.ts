@@ -30,7 +30,13 @@ export interface IFeaturedApp {
   reviews: number;
 }
 
-export interface IMarketShareItem{
+export interface ITopCategory {
+  id: string;
+  name: string;
+  totalInstalls: string;
+}
+
+export interface IMarketShareItem {
   category: string;
-  app_count: number
+  app_count: number;
 }

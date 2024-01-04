@@ -8,7 +8,7 @@ const FeaturedApps = () => {
 
   const getFeaturedApps = async () => {
     try {
-      const res = await fetch("/api/apps/featured", {
+      const res = await fetch("/api/apps/featured-apps", {
         method: "GET",
       });
       const { data } = await res.json();
@@ -23,30 +23,28 @@ const FeaturedApps = () => {
   }, []);
 
   return (
-    <div className="h-auto w-full bg-white rounded-lg p-4 pb-8 shadow-outline mt-4">
-      <h1 className="text-lg font-bold text-green p-4">Top Featured Apps</h1>
-      <div className="flex flex-col">
-        <div className="opacity-60 flex w-full justify-end px-8">
-          <p>Ratings</p>
-        </div>
+    <div className="h-auto my-auto w-full md:w-1/3 lg:w-1/3 bg-white rounded-lg p-4 pb-8 shadow-outline mt-4">
+      <div className="flex w-full items-center justify-between">
+        <h1 className="text-xl font-bold text-green p-4">Featured Apps</h1>
+        <p className="opacity-60  pr-8 text-md">Rating</p>
+      </div>
         <div className="pt-4">
           {apps.map((app, index) => (
             <div
               key={app.id}
-              className="flex items-start justify-between mb-4 gap-2"
+              className="flex items-start justify-between mb-2 gap-2 pl-4"
             >
-              <div className="flex gap-2">
-                <p className="pl-2">{index + 1}.</p>
+              <div className="flex gap-2  font-semibold">
+                <p>{index + 1}.</p>
                 <div>
                   <h3 className="text-ellipsis">{app.name}</h3>
                   <p className="text-sm text-silver">{app.reviews} reviews</p>
                 </div>
               </div>
-              <p className="pr-10">{app.rating}</p>
+              <p className="pr-10 opacity-60 text-sm">{app.rating}</p>
             </div>
           ))}
         </div>
-      </div>
     </div>
   );
 };
