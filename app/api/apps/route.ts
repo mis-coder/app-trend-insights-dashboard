@@ -1,15 +1,10 @@
-import { promises as fs } from "fs";
+import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
 
 export async function GET(_req: Request) {
   try {
-    const file = await fs.readFile(
-      process.cwd() + "/data/appInfo.json",
-      "utf-8"
-    );
-    const data = JSON.parse(file);
-
-    return NextResponse.json(data);
+    const result = await sql`SELECT * from apps`;
+    return NextResponse.json(result);
   } catch (err) {
     console.log("[GET_APPS]: ", err);
     throw new NextResponse("Internal Server Error", { status: 500 });

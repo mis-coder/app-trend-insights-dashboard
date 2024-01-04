@@ -15,3 +15,28 @@ export interface AppInfoItem {
 }
 
 export type CategoryNumberMap = Record<string, number>;
+
+export enum Overview {
+  TOTAL_APP_COUNT = "total_app_count",
+  TOTAL_INSTALLS = "total_installs",
+  AVERAGE_REVIEW = "average_reviews",
+  AVERAGE_RATING = "average_rating",
+}
+
+export interface IFeaturedApp {
+  id: string;
+  name: string;
+  rating: number;
+  reviews: number;
+}
+
+export interface ITopCategory {
+  id: string;
+  name: string;
+  totalInstalls: string;
+}
+
+export interface IMarketShareItem {
+  category: string;
+  app_count: number;
+}

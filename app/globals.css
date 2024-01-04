@@ -6,9 +6,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --silver-light: #f2f3f7
 }
 
 body{
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
+    background-color:var(--silver-light) ;
 }
