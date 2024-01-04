@@ -29,3 +29,8 @@ export interface IFeaturedApp {
   rating: number;
   reviews: number;
 }
+
+export interface IMarketShareItem{
+  category: string;
+  app_count: number
+}
