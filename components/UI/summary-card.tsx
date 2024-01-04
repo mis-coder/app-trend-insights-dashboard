@@ -17,7 +17,7 @@ const SummaryCard: React.FC<SummaryCardProps> = ({
       style={{ backgroundColor: bgColor }}
     >
       <p className="text-sm">{title}</p>
-      <h1 className="text-3xl md:text-5xl lg:text-5xl mt-2 font-bold">{value}</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl mt-2 font-bold">{value}</h1>
     </div>
   );
 };
