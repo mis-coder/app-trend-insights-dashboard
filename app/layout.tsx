@@ -21,8 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={nunitoSans.className}>
         <Header />
+        <div className="flex w-screen h-screen fixed">
         <Sidebar />
+        <div className="p-6 overflow-y-auto w-screen md:w-auto lg:w-auto">
         {children}
+        </div>
+        </div>
       </body>
     </html>
   );

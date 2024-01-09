@@ -33,7 +33,7 @@ const Summary = () => {
       <SummaryCard
         title="Total Installs"
         value={data[Overview.TOTAL_INSTALLS]}
-        bgColor="#ff9f40"
+        bgColor="#ffcd56"
       />
       <SummaryCard
         title="Average Reviews"

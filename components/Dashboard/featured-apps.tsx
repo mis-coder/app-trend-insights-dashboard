@@ -23,7 +23,7 @@ const FeaturedApps = () => {
   }, []);
 
   return (
-    <div className="h-auto my-auto w-full md:w-1/3 lg:w-1/3 bg-white rounded-lg p-4 pb-8 shadow-outline mt-4">
+    <div className="h-auto my-auto w-full md:w-1/2 lg:w-1/2 bg-white rounded-lg p-4 pb-8 shadow-outline mt-4">
       <div className="flex w-full items-center border-b-1 border-b-solid border-b-silver justify-between">
         <h1 className="text-xl font-bold text-green p-4">Featured Apps</h1>
         <p className="opacity-60  pr-8 text-md">Rating</p>
