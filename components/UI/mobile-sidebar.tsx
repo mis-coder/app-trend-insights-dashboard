@@ -1,17 +1,14 @@
 import { sidebarItems } from "@/config/ui";
 
-const Sidebar = () => {
+const MobileSidebar = () => {
   return (
-    <div className="hidden w-1/3 h-full md:flex lg:flex flex-col items-start justify-center pt-4 pl-8 bg-red">
-      <h1 className="text-xl text-white font-extrabold mt-8 underline">
-        APP TRENDZ
-      </h1>
-      <div className="flex flex-col justify-center h-full pt-24">
+    <div className="fixed top-16 left-0 w-1/3 h-full flex-col items-start justify-center pt-4 pl-8 bg-red">
+      <div className="flex flex-col justify-center h-full">
         {sidebarItems.map((item) =>
           item.id === "askTrendzAi" ? (
             <div
               key={item.id}
-              className="flex items-center gap-2 py-4 text-md text-yellow font-bold mt-auto cursor-pointer hover:opacity-50 transition-opacity duration-500"
+              className="flex items-center gap-2 py-4 text-md text-yellow font-bold mt-20 cursor-pointer hover:opacity-50 transition-opacity duration-500"
             >
               {<item.icon size="20" strokeWidth="3" />}
               <p className="">{item.title}</p>
@@ -31,4 +28,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default MobileSidebar;
