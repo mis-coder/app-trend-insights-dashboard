@@ -9,7 +9,7 @@ interface MobileSidebarProps {
 const MobileSidebar: React.FC<MobileSidebarProps> = ({ show, setShow }) => {
   return (
     <div
-      className={`fixed top-0 w-1/2 h-full flex-col items-start justify-center pt-20 pl-8 bg-red shadow-2xl animate-enter-from-left`}
+      className={`fixed top-0 w-2/3 h-full flex-col items-start justify-center pt-20 pl-8 bg-red shadow-2xl animate-enter-from-left`}
     >
       <ChevronLeftCircleIcon
         size="27"
