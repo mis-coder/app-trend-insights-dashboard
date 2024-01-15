@@ -7,7 +7,7 @@ interface MenuBarMobileProps {
 
 const MenuBarMobile: React.FC<MenuBarMobileProps> = ({ show, setShow }) => {
   return (
-    <div className="fixed md:hidden lg:hidden bg-red h-16 w-screen flex items-center justify-start text-xl font-bold text-white uppercase pl-4">
+    <div className="fixed md:hidden lg:hidden bg-red h-16 w-screen flex items-center justify-start text-xl font-bold text-white uppercase p-5">
       <ChevronRightCircleIcon
         size="30"
         className="mr-4 animate-bounce-left cursor-pointer"
