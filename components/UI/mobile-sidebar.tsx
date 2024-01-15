@@ -29,9 +29,9 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ show, setShow }) => {
           ) : (
             <div
               key={item.id}
-              className="flex items-center gap-2 py-5 text-sm font-bold text-white  cursor-pointer hover:opacity-50 transition-opacity duration-500"
+              className="flex items-center gap-2 py-5 text-md font-bold text-white  cursor-pointer hover:opacity-50 transition-opacity duration-500"
             >
-              {<item.icon size="16" />}
+              {<item.icon size="20" />}
               <p>{item.title}</p>
             </div>
           )
