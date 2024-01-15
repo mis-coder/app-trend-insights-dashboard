@@ -14,7 +14,7 @@ const Sidebar = () => {
               className="flex items-center gap-2 py-4 text-md text-yellow font-bold mt-auto cursor-pointer hover:opacity-50 transition-opacity duration-500"
             >
               {<item.icon size="20" strokeWidth="3" />}
-              <p className="">{item.title}</p>
+              <p>{item.title}</p>
             </div>
           ) : (
             <div
@@ -22,7 +22,7 @@ const Sidebar = () => {
               className="flex items-center gap-2 py-5 text-sm font-bold text-white  cursor-pointer hover:opacity-50 transition-opacity duration-500"
             >
               {<item.icon size="16" />}
-              <p className="">{item.title}</p>
+              <p>{item.title}</p>
             </div>
           )
         )}
