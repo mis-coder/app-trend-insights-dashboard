@@ -23,6 +23,31 @@ const config: Config = {
         silver: "#c9cbcf",
         "silver-light": "#f2f3f7",
       },
+      animation: {
+        "bounce-left": "left 1s infinite",
+        "enter-from-left": "left-enter 0.3s linear",
+      },
+
+      keyframes: {
+        left: {
+          "0%, 100%": {
+            transform: " translateX(-25%)",
+            "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: " translateX(0)",
+            "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+        "left-enter": {
+          from: {
+            left: "-50%",
+          },
+          to: {
+            left: "0",
+          },
+        },
+      },
     },
   },
   plugins: [],

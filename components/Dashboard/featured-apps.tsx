@@ -23,10 +23,10 @@ const FeaturedApps = () => {
   }, []);
 
   return (
-    <div className="h-auto my-auto w-full md:w-1/3 lg:w-1/3 bg-white rounded-lg p-4 pb-8 shadow-outline mt-4">
+    <div className="h-auto my-auto w-full md:w-1/2 lg:w-1/2 bg-white rounded-lg p-4 pb-8 shadow-outline mt-4">
       <div className="flex w-full items-center border-b-1 border-b-solid border-b-silver justify-between">
         <h1 className="text-xl font-bold text-green p-4">Featured Apps</h1>
-        <p className="opacity-60  pr-8 text-md">Rating</p>
+        <p className="pr-8 text-md">Rating</p>
       </div>
 
       <div>
@@ -42,7 +42,7 @@ const FeaturedApps = () => {
                 <p className="text-sm text-silver">{app.reviews} reviews</p>
               </div>
             </div>
-            <p className="pr-10 opacity-60 text-sm">{app.rating}</p>
+            <p className="pr-10 text-sm text-gray-500">{app.rating}</p>
           </div>
         ))}
       </div>
