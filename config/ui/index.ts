@@ -1,10 +1,4 @@
-import {
-  Bot,
-  Filter,
-  LayoutDashboard,
-  PieChart,
-  TrendingUp,
-} from "lucide-react";
+import { Filter, LayoutDashboard, PieChart, TrendingUp } from "lucide-react";
 
 export const sidebarItems = [
   {
@@ -29,12 +23,6 @@ export const sidebarItems = [
     id: "riskAssesment",
     title: "Risk Assesment",
     icon: TrendingUp,
-    actionUrl: "/#",
-  },
-  {
-    id: "askTrendzAi",
-    title: "Ask Trendz AI",
-    icon: Bot,
     actionUrl: "/#",
   },
 ];
