@@ -39,7 +39,7 @@ const FeaturedCategories = () => {
                 {category.name}
               </h3>
             </div>
-            <p className="pr-10 opacity-60 text-xs md:text-sm lg:text-sm">
+            <p className="pr-10 text-gray-500 text-xs md:text-sm lg:text-sm">
               {category.totalInstalls} installs
             </p>
           </div>
