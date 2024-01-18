@@ -1,3 +1,10 @@
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 export const generateRandomColors = (totalColors: number) => {
   const colors = [];
 
@@ -34,4 +41,3 @@ export const formatBigNumber = (num: number, precision = 2) => {
 
   return num;
 };
-

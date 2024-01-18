@@ -2,7 +2,7 @@ import { sidebarItems } from "@/config/ui";
 
 const Sidebar = () => {
   return (
-    <div className="hidden w-1/3 h-full md:flex lg:flex flex-col items-start justify-center pt-4 pl-8 bg-red">
+    <div className="hidden w-1/4 h-full md:flex lg:flex flex-col items-start justify-center pt-4 pl-8 bg-red">
       <h1 className="text-xl text-white font-extrabold mt-8 underline">
         APP TRENDZ
       </h1>

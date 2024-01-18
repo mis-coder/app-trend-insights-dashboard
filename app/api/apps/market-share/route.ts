@@ -21,5 +21,6 @@ export async function GET() {
     });
   } catch (err) {
     console.log("[GET_MARKET_SHARE]: ", err);
+    throw new NextResponse("Internal Server Error", { status: 500 });
   }
 }

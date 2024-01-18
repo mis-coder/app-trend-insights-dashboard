@@ -30,7 +30,7 @@ export default function RootLayout({
         <ResponsiveSidebar />
         <div className="flex w-screen h-screen ">
           <Sidebar />
-          <div className="z-1 pt-20 md:pt-5 lg:pt-5 p-5 overflow-y-auto w-screen md:w-auto lg:w-auto">
+          <div className="z-1 pt-20 md:pt-5 lg:pt-5 p-5 overflow-y-auto w-screen ">
             {children}
           </div>
         </div>
