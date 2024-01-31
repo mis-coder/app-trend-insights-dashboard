@@ -11,7 +11,7 @@ export const sidebarItems = [
     id: "filters",
     title: "Filters",
     icon: Filter,
-    actionUrl: "/#",
+    actionUrl: "/filters",
   },
   {
     id: "categoryAnalysis",

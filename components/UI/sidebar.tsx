@@ -1,4 +1,5 @@
 import { sidebarItems } from "@/config/ui";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -8,13 +9,14 @@ const Sidebar = () => {
       </h1>
       <div className="flex flex-col h-full pt-24">
         {sidebarItems.map((item) => (
-          <div
+          <Link
+            href={item.actionUrl}
             key={item.id}
             className="flex items-center gap-2 py-5 text-sm font-bold text-white  cursor-pointer hover:opacity-50 transition-opacity duration-500"
           >
             {<item.icon size="16" />}
             <p>{item.title}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
