@@ -5,6 +5,11 @@ import { ColumnDef } from "@tanstack/react-table";
 
 export const filtersTableColumns: ColumnDef<AppInfoItem>[] = [
   {
+    accessorKey: "id",
+    header: "S.No.",
+    cell: (info) => Number(info.row.id) + 1,
+  },
+  {
     accessorKey: "name",
     header: "Name",
     cell: (info) => info.getValue(),

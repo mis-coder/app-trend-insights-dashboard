@@ -37,18 +37,17 @@ const FiltersTable = () => {
     getCoreRowModel: getCoreRowModel(),
   });
 
-  console.log("getRowModel(): ", getRowModel());
   return (
     <div>
       {loading ? (
         <h1>Loading ...</h1>
       ) : (
-        <table>
-          <thead>
+        <table className="border border-gray-300 w-full text-left text-sm overflow-x-auto">
+          <thead className="bg-green text-white">
             {getHeaderGroups().map((group) => (
               <tr key={group.id}>
                 {group.headers.map((header) => (
-                  <th key={header.id}>
+                  <th className="uppercase px-2 py-2" key={header.id}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -61,10 +60,10 @@ const FiltersTable = () => {
             ))}
           </thead>
           <tbody>
-            {getRowModel().rows.map((row) => (
-              <tr key={row.id}>
+            {getRowModel().rows.map((row, i) => (
+              <tr className={`${i % 2 !== 0 ? "bg-gray-200": ""}`} key={row.id}>
                 {row.getVisibleCells().map((cell) => (
-                  <td key={cell.id}>
+                  <td className="px-2 py-3" key={cell.id}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
                 ))}
