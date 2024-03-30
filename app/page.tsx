@@ -6,7 +6,7 @@ import Summary from "@/components/Dashboard/summary";
 
 export default async function Home() {
   return (
-    <main className="h-full bg-silver-light">
+    <main className="h-full p-4  bg-silver-light">
       <Description />
       <Summary />
       <div className="w-full flex flex-col-reverse md:flex-row lg:flex-row gap-1 md:gap-4 lg:gap-4">

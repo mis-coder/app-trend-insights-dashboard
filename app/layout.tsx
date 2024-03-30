@@ -1,5 +1,4 @@
-import ResponsiveSidebar from "@/components/Menu/responsive-sidebar";
-import Sidebar from "@/components/UI/sidebar";
+import Header from "@/components/UI/header";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import Script from "next/script";
@@ -27,13 +26,8 @@ export default function RootLayout({
         />
       </head>
       <body className={nunitoSans.className}>
-        <ResponsiveSidebar />
-        <div className="flex w-screen h-screen ">
-          <Sidebar />
-          <div className="z-1 pt-20 md:pt-5 lg:pt-5 p-5 overflow-y-auto w-screen md:w-auto lg:w-auto">
-            {children}
-          </div>
-        </div>
+        <Header />
+        {children}
       </body>
     </html>
   );
